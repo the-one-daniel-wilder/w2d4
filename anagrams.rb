@@ -1,19 +1,8 @@
-#"elvis"
-
-
 
 def first_anagram?(string, anagram)
 
   string.split('').permutation.include?(anagram.split(''))
 end
-
- # p anagrams('elvis', 'visel')
-
-
-# p "elvis".split('').permutation
-# p str = "aabcd"
-# str.delete(str.index('a'))
-# def anagrams
 
 
 def second_anagram?(string, anagram)
@@ -25,6 +14,7 @@ def second_anagram?(string, anagram)
 
    ana.empty?
 end
+
 
 def third_anagram?(string, other_string)
   string.chars.sort == other_string.chars.sort
@@ -45,6 +35,7 @@ def fourth_anagram?(string, other_string)
   hash1 == hash2
 end
 
+
 def bonus_anagram?(string, other_string)
   hash = {}
 
@@ -58,14 +49,3 @@ def bonus_anagram?(string, other_string)
 
   hash.all? { |k, v| hash["#{k}2"] = hash[k] }
 end
-
-p fourth_anagram?('elvis', 'abcde')
-p fourth_anagram?('elvis', 'visel')
-
-# p "aabc" - "a"
-
-
-
- # p ['a', 'a', 'b', 'c'] - ['a']
-#   puts i
-# end
